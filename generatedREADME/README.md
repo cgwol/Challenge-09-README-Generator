@@ -1,31 +1,9 @@
-# Test Title
+# title
+![MIT License](https://img.shields.io/badge/license-MIT-blue)
 
-## Description 
-  Test
-
-## Table of Contents
-  
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing Guidlines](#contributing-guidlines)
-  - [Testing](#testing)
-  - [Questions](#questions)
-
-## Installation
-  Test
-
-## Usage
-  Test
-
-## Contributing Guidlines
-  TEst
-  
-## Testing
-  Test
+## License
+  This Application is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license
   
 ## Questions
-  Created by: [cgwol](github.com/cgwol/)
-  
-  Contact with any further questions at [email@email.to](mailto:email@email.to)
+  Created by: [cgwol](https://github.com/cgwol/)
   

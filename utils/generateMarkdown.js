@@ -121,9 +121,8 @@ function createQuestions(){
 }
 
 function createGithub(data) {
-  console.log(data);
   return `
-  Created by: [${data}](github.com/${data}/)
+  Created by: [${data}](https://github.com/${data}/)
   `
 }
 
