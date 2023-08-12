@@ -111,7 +111,7 @@ function createContr(data) {
 function createlicense(data, link) {
   return `
 ## License
-  This Application is licensed under the [${data}](${link}) license
+  This application is licensed under the [${data}](${link}) license
   `
 }
 
