@@ -13,20 +13,30 @@ const questions = [
                 return true;
             }
             else {
-                return 'Project Title Required';
+                return 'Project Title Required' ;
             }
         }
     },
     {
         type: 'input',
         name: 'desc',
-        message: 'Provide a description of the project.'
+        message: 'Provide a description of the project. '
+    },
+    {
+        type: 'input',
+        name: 'install',
+        message: 'Provide insallation instructions for the project. '
     },
     {
         type: 'input',
         name: 'usage',
         message: 'Provide information on using the project.'
     },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Provide any information on guidelines for contributing. '
+    }
 ];
 
 // TODO: Create a function to write README file
