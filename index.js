@@ -41,7 +41,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Provide license information. ',
-        choices: ['MIT', 'Apache 2.0', 'GNU', 'ISC', 'none'],
+        choices: ['MIT', 'Apache 2.0', 'GNU AGLPv3', 'GNU GPLv3', 'Mozilla Public License 2.0', 'Boost Software License 1.0', 'Unlicensed'],
     }
 ];
 
