@@ -1,3 +1,3 @@
 .git
 ._*
-*/node_modules/
+**/node_modules
