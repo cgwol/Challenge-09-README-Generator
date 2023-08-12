@@ -99,19 +99,19 @@ function tblAppends(descFlag, installFlag, usageFlag, contrFlag){
   var appends = `
  `;
   if(descFlag){
-    appends +=  ` [Description](#description)
+    appends +=  ` - [Description](#description)
 `;
   }
   if(installFlag){
-    appends += `  [Installation](#installation)
+    appends += `  - [Installation](#installation)
 `
   }
   if(usageFlag){
-    appends += `  [Usage](#usage)
+    appends += `  - [Usage](#usage)
 `;
   }
   if(contrFlag) {
-    appends += `  [Contributing Guidlines](#contributing-guidlines)
+    appends += `  - [Contributing Guidlines](#contributing-guidlines)
 `
   }
 

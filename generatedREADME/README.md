@@ -1,20 +1,20 @@
-# Testing Table
+# Testing Format
 
 ## Description 
-  Table formatting
+  Testing the format for the tbale of contents
 
 ## Table of Contents
   
-  [Description](#description)
-  [Installation](#installation)
-  [Usage](#usage)
-  [Contributing Guidlines](#contributing-guidlines)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing Guidlines](#contributing-guidlines)
 
 ## Installation
   npm i
 
 ## Usage
-  node
+  node index.js
 
 ## Contributing Guidlines
   cgwol
