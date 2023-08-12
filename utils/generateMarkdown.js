@@ -96,18 +96,23 @@ function createContr(data){
 }
 
 function tblAppends(descFlag, installFlag, usageFlag, contrFlag){
-  var appends = '';
+  var appends = `
+ `;
   if(descFlag){
-    appends +=  `[Description](#description)\n\t`;
+    appends +=  ` [Description](#description)
+`;
   }
   if(installFlag){
-    appends += `[Installation](#installation)\n\t`
+    appends += `  [Installation](#installation)
+`
   }
   if(usageFlag){
-    appends += `[Usage](#usage)\n\t`;
+    appends += `  [Usage](#usage)
+`;
   }
   if(contrFlag) {
-    appends += `[Contributing Guidlines](#contributing-guidlines)\n\t`
+    appends += `  [Contributing Guidlines](#contributing-guidlines)
+`
   }
 
   return appends;
