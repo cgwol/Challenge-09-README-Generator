@@ -58,11 +58,9 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
 function init() {
     return inq.prompt(questions);
 }
 
-// Function call to initialize app
 init().then(responses => generateMarkdown(responses)).
     then(generateREADME => writeToFile('README.md', generateREADME));
