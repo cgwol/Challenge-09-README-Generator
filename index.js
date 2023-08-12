@@ -36,6 +36,12 @@ const questions = [
         type: 'input',
         name: 'contributing',
         message: 'Provide any information on guidelines for contributing. '
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Provide license information. ',
+        choices: ['MIT', 'Apache 2.0', 'GNU', 'ISC', 'none'],
     }
 ];
 

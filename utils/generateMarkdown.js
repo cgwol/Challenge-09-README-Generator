@@ -1,16 +1,20 @@
 class Output {
-  constructor(title, desc, install, usage, contributing) {
+  constructor(title, desc, install, usage, contributing, license) {
     this.title = title;
     this.desc = desc;
     this.install = install;
     this.usage = usage;
     this.contributing = contributing;
+    this.license = license;
   }
 }
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+function getLicenseBadge(license) { 
+  return `![${license} License](https://img.shields.io/badge/license-${license.split(' ').join('%20')}-blue)
+`
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -28,7 +32,8 @@ function generateMarkdown(data) {
     desc = data.desc,
     install = data.install,
     usage = data.usage,
-    contributing = data.contributing
+    contributing = data.contributing,
+    license = data.license,
   );
 
   // Optional Input Flags
@@ -40,14 +45,21 @@ function generateMarkdown(data) {
   if (output.usage != '') { usageFlag = true }
   var contrFlag = false;
   if (output.contributing != '') { contrFlag = true }
+  var licenseFlag = false;
+  if (output.license != 'none') { licenseFlag = true }
+
+  // Getting License Badge
+  var licenseBadge = getLicenseBadge(output.license);
 
   // Appending Mark Down Output
   var outputMD = createTitle(output.title);
+  if (licenseFlag) {outputMD += licenseBadge}
   if (descFlag) {outputMD += createDesc(output.desc)}
-  if (descFlag || usageFlag || installFlag) { outputMD += createTbl(descFlag, installFlag ,usageFlag, contrFlag); }
+  if (descFlag || usageFlag || installFlag) { outputMD += createTbl(descFlag, installFlag ,usageFlag, contrFlag, licenseFlag); }
   if (installFlag) { outputMD += createInstall(output.install) }
   if (usageFlag) { outputMD += createUsage(output.usage) }
   if (contrFlag) { outputMD += createContr(output.contributing) }
+  if (licenseFlag) { outputMD += createlicense(output.license) }
 
   return outputMD;
   ;
@@ -61,10 +73,10 @@ function createTitle(data) {
 `
 }
 
-function createTbl(descFlag, installFlag, usageFlag, contrFlag){
+function createTbl(descFlag, installFlag, usageFlag, contrFlag, licenseFlag){
   return `
 ## Table of Contents
-  ` + tblAppends(descFlag, installFlag ,usageFlag, contrFlag);
+  ` + tblAppends(descFlag, installFlag ,usageFlag, contrFlag, licenseFlag);
 }
 
 function createDesc(data) {
@@ -95,7 +107,14 @@ function createContr(data){
   `
 }
 
-function tblAppends(descFlag, installFlag, usageFlag, contrFlag){
+function createlicense(data){
+  return `
+## License
+  This Application is licensed under the ${data} license
+  `
+}
+
+function tblAppends(descFlag, installFlag, usageFlag, contrFlag, licenseFlag){
   var appends = `
  `;
   if(descFlag){
@@ -112,6 +131,10 @@ function tblAppends(descFlag, installFlag, usageFlag, contrFlag){
   }
   if(contrFlag) {
     appends += `  - [Contributing Guidlines](#contributing-guidlines)
+`
+  }
+  if(licenseFlag){
+    appends += `  - [License](#license)
 `
   }
 

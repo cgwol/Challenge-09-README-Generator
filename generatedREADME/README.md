@@ -1,21 +1,14 @@
-# Testing Format
+# Testting Bagde
+![MIT License](https://img.shields.io/badge/license-MIT-blue)
 
 ## Description 
-  Testing the format for the tbale of contents
+  testing badge
 
 ## Table of Contents
   
   - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing Guidlines](#contributing-guidlines)
+  - [License](#license)
 
-## Installation
-  npm i
-
-## Usage
-  node index.js
-
-## Contributing Guidlines
-  cgwol
+## License
+  This Application is licensed under the MIT license
   
